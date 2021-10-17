@@ -23,3 +23,5 @@ def get_json_schema(self):
 ```
 
 Delete this file once you're done. Or don't. Up to you :)  
+
+TODO: Put documentation link in spec.json
