@@ -9,7 +9,11 @@
     "properties": {
       "api_url": {
         "type": "string",
-        "description": "The URL for the New Relic NerdGraph API Endpoint. This will differ based on your New Relic region."
+        "description": "The URL for the New Relic NerdGraph API Endpoint. This will differ based on your New Relic region.",
+        "examples": [
+          "https://api.newrelic.com/graphql",
+          "https://api.eu.newrelic.com/graphql"
+        ]
       },
       "user_key": {
         "type": "string",
