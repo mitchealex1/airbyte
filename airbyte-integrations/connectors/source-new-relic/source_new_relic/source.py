@@ -193,6 +193,13 @@ class SourceNewRelic(AbstractSource):
         :param logger:  logger object
         :return Tuple[bool, any]: (True, None) if the input config can be used to connect to the API successfully, (False, error) otherwise.
         """
+        user_key = config.get("user_key")
+        api_url = config.get("api_url")
+        headers = {
+            "API-Key": user_key
+        }
+        body = "{\n  requestContext {\n    apiKey\n    userId\n  }\n}\n"
+        requests.get(api_url, headers=headers, body=body)
         return True, None
 
     def streams(self, config: Mapping[str, Any]) -> List[Stream]:
